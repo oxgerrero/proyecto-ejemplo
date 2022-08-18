@@ -1,0 +1,24 @@
+
+using System; 
+using System.Collections.Generic; 
+using Twilio; 
+using Twilio.Rest.Api.V2010.Account; 
+using Twilio.Types; 
+ 
+class Example 
+{ 
+    static void Main(string[] args) 
+    { 
+        var accountSid = "AC437e94ebb159ee933e85996bd356ce88"; 
+        var authToken = "d2f04f3e9020e8cc7b598a6a92101fc7"; 
+        TwilioClient.Init(accountSid, authToken); 
+ 
+        var messageOptions = new CreateMessageOptions( 
+            new PhoneNumber("+573112794086"));   
+        messageOptions.MessagingServiceSid = "MG26a1e66f416ef7b8ba4f437f14efb730";  
+        messageOptions.Body = "su codigo de verificacion para el pago es # el valor del pago es de # realizado a la cuenta bancaria de # numero #";   
+ 
+        var message = MessageResource.Create(messageOptions); 
+        Console.WriteLine(message.Body); 
+    } 
+}

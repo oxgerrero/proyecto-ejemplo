@@ -1,0 +1,35 @@
+<html>
+<head>
+<title></title>
+<style>
+	body {
+		cursor:url(http://localhost/prueba%20javscript/imagen.png), auto;
+	}
+</style>
+</head>
+<body>
+TEXTO 
+<input id="t" type="text" onkeyup="this.value=sololetras(this.value,1,5)">
+</br>
+TEXTO Y NUMEROS 
+<input id="tn" type="text" maxlength="30" onkeyup="this.value=sololetras(this.value,2,10)">
+</br>
+MAYUSCULAS 
+<input id="M" type="text" maxlength="9" onkeyup="this.value=sololetras(this.value,3)">
+</br>
+MINUSCULAS 
+<input id="m" type="text" maxlength="9" onkeyup="this.value=sololetras(this.value,4)">
+</br>
+NUMEROS 
+<input id="n" type="text" maxlength="10" onkeyup="this.value=sololetras(this.value,5)">
+</br>
+CORREO 
+<input id="c" type="text" maxlength="20" onkeyup="this.value=sololetras(this.value,6)">
+</br>
+FECHA
+<input id="f" type="date" value="2020-11-20" min="2000-01-01" max="2020-11-20">
+</br>
+<input type="submit" onclick="vercorreo()">
+</body>
+<script src="validaciones.js"></script>
+</html>
